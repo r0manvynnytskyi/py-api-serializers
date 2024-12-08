@@ -9,9 +9,11 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
+
 import os
 from pathlib import Path
 from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +27,7 @@ SECRET_KEY = config("DJANGO_SECRET_KEY", default="fallback-secret-key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
 
 # Application definition
@@ -93,16 +95,13 @@ AUTH_PASSWORD_VALIDATORS = [
         "UserAttributeSimilarityValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation."
-        "MinimumLengthValidator",
+        "NAME": "django.contrib.auth.password_validation." "MinimumLengthValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation."
-        "CommonPasswordValidator",
+        "NAME": "django.contrib.auth.password_validation." "CommonPasswordValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation."
-        "NumericPasswordValidator",
+        "NAME": "django.contrib.auth.password_validation." "NumericPasswordValidator",
     },
 ]
 
